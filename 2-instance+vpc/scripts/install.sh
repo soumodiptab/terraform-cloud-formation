@@ -1,5 +1,6 @@
 #!/bin/bash
-# nodejs rabbit mq mongo redis trino nginx
+# add installation script for:
+# nodejs rabbit-mq mongo redis trino nginx
 echo 'Running installation script'
 sudo apt update
 sudo apt-get install -y git
