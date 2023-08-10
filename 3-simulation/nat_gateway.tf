@@ -1,5 +1,8 @@
 resource "aws_eip" "nat_eip" {
-  vpc = true
+    domain = "vpc"
+    tags = {
+        Name = "Simulation-nat-eip"
+    }
 }
 resource "aws_nat_gateway" "ngw" {
     allocation_id = aws_eip.nat_eip.id
