@@ -30,3 +30,13 @@ resource "aws_route_table_association" "sim-nat-rta" {
     subnet_id = aws_subnet.sim-subnet-private.id
     route_table_id = aws_route_table.sim-private-rt.id
 }
+
+resource "aws_route_table_association" "sim-nat-rta-2" {
+  subnet_id = aws_subnet.sim-subnet-private-2.id
+  route_table_id = aws_route_table.sim-private-rt.id
+}
+
+resource "aws_route_table_association" "sim-nat-rta-3" {
+  subnet_id = aws_subnet.sim-subnet-private-3.id
+  route_table_id = aws_route_table.sim-private-rt.id
+}

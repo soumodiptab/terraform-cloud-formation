@@ -1,4 +1,4 @@
-resource "aws_security_group" "all_traffic_ssh" {
+resource "aws_security_group" "ssh-server" {
     vpc_id = aws_vpc.sim-vpc.id
     # allow host to connect to internet
     egress{
