@@ -26,6 +26,7 @@ resource "aws_autoscaling_group" "web-asg" {
     desired_capacity = 2
     max_size = 4
     health_check_type = "EC2"
+    health_check_grace_period = 20
     target_group_arns = [aws_lb_target_group.web-tg.arn]
     launch_template {
         id = aws_launch_template.node-server.id
@@ -40,7 +41,8 @@ resource "aws_autoscaling_group" "web-asg" {
     ]
     metrics_granularity = "1Minute"
     vpc_zone_identifier = [
-        aws_subnet.sim-subnet-private.id
+        aws_subnet.sim-subnet-private.id,
+        aws_subnet.sim-subnet-private-2.id
     ]
     lifecycle {
         create_before_destroy = true
@@ -57,7 +59,7 @@ resource "aws_autoscaling_policy" "web-asg-up" {
     name = "web-asg-up"
     scaling_adjustment = 1
     adjustment_type = "ChangeInCapacity"
-    cooldown = 300 #variable
+    cooldown = 60 #variable
     autoscaling_group_name = aws_autoscaling_group.web-asg.name
 }
 
@@ -84,7 +86,7 @@ resource "aws_autoscaling_policy" "web-asg-down" {
     name = "web-asg-down"
     scaling_adjustment = -1
     adjustment_type = "ChangeInCapacity"
-    cooldown = 300 #variable
+    cooldown = 60 #variable
     autoscaling_group_name = aws_autoscaling_group.web-asg.name
 }
 

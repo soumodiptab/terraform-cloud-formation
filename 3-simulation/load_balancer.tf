@@ -8,17 +8,12 @@ resource "aws_lb" "web-lb" {
         aws_security_group.ssh-server.id
     ]
     subnets = [
-      aws_subnet.sim-subnet-private.id,
-      aws_subnet.sim-subnet-private-2.id,
-      aws_subnet.sim-subnet-private-3.id
+      aws_subnet.sim-subnet-public.id,
+      aws_subnet.sim-subnet-public-2.id
       ]
     tags = {
         Name = "web-lb"
     }
-    depends_on = [ 
-      aws_subnet.sim-subnet-private, 
-      aws_subnet.sim-subnet-private-2, 
-      aws_subnet.sim-subnet-private-3 ]
 }
 resource "aws_lb_listener" "web-lb-listener" {
   load_balancer_arn = aws_lb.web-lb.arn
