@@ -2,8 +2,8 @@
 echo 'Running installation script'
 sudo apt update
 sudo apt-get install -y git
-sudo apt-get install -y nodejs
-echo 'Finished running installation script'
+# sudo apt-get install -y nodejs
+# echo 'Finished running installation script'
 # cd ~
 # rm test.txt
 # touch test.txt
@@ -13,6 +13,6 @@ echo 'Finished running installation script'
 # cd simple-express-server
 # nohup node server.js &
 # echo 'Started server'
-apt install apache2 -y
-systemctl start apache2
-systemctl enable apache2
+# apt install apache2 -y
+# systemctl start apache2
+# systemctl enable apache2
