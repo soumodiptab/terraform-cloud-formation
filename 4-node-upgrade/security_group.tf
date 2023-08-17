@@ -59,3 +59,28 @@ resource "aws_security_group" "mongo-server" {
       Name = "sim-mongo-traffic"
     }
 }
+
+resource "aws_security_group" "rabbit-mq" {
+    vpc_id = aws_vpc.sim-vpc.id
+    ingress{
+        from_port = 5672
+        to_port = 5672
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+    tags = {
+      Name = "sim-rabbit-traffic"
+    }
+}
+resource "aws_security_group" "redis" {
+    vpc_id = aws_vpc.sim-vpc.id
+    ingress{
+        from_port = 6379
+        to_port = 6379
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+    tags = {
+      Name = "sim-redis-traffic"
+    }
+}

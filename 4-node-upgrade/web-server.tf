@@ -1,5 +1,5 @@
 data "template_file" "install_script"{
-    template = file("./scripts/bootstrap-web.sh")  
+    template = file("./scripts/bootstrap-al2023.sh")  
 }
 
 resource "aws_instance" "demo-instance" {
@@ -14,11 +14,11 @@ resource "aws_instance" "demo-instance" {
     key_name = aws_key_pair.demo-key-pair.id
     provisioner "file" {
         source = var.GIT_KEY_PRIVATE_PATH
-        destination = "/home/${var.EC2_USER}/id_rsa"
+        destination = "/home/${var.EC2_USER}/.ssh/id_rsa"
     }
     provisioner "file" {
         source = var.GIT_KEY_PUBLIC_PATH
-        destination = "/home/${var.EC2_USER}/id_rsa.pub"
+        destination = "/home/${var.EC2_USER}/.ssh/id_rsa.pub"
     }
     connection {
         type = "ssh"
@@ -28,6 +28,6 @@ resource "aws_instance" "demo-instance" {
     }
     user_data = data.template_file.install_script.rendered
     tags = {
-        Name = "Platform Instance"
+        Name = "Node Instance"
     }
 }

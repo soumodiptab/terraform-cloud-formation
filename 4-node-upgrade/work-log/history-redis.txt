@@ -1,0 +1,58 @@
+ 1  yum update -y
+    2  ls
+    3  yum install redis-server
+    4  sudo yum install redis-server -y
+    5  sudo amazon-linux-extras install epel
+    6  sudo amazon-linux-extras install epel -y
+    7  sudo yum update
+    8  yum install redis-server
+    9  sudo yum install redis-server
+   10  sudo yum install redis
+   11  redis-cli
+   12  sudo systemctl start redis
+   13  redis-cli
+   14  clear
+   15  sudo systemctl enable redis-server
+   16  sudo systemctl redis-server status
+   17  sudo service redis-server status
+   18  sudo service redis status
+   19  sudo systemctl enable redis
+   20  sudo systemctl enable redis-server
+   21  redis-server
+   22  sudo systemctl disable redis
+   23  sudo systemctl stop redis
+   24  redis-server
+   25  vim /etc/redis/redis.conf
+   26  cat /etc/redis/redis.conf
+   27  sudo vim /etc/redis/redis.conf
+   28  sudo touch /etc/redis/redis.conf
+   29  mkdir /etc/redis
+   30* 
+   31  sudo vim /etc/redis/redis.conf
+   32  redis-server
+   33  sudo service redis start
+   34  redis-cli
+   35  sudo service redis stop
+   36  sudo service redis-server start
+   37  sudo systemctl redis-server start
+   38  sudo systemctl start redis
+   39* sudo systemctl redis
+   40  sudo service redis start
+   41  sudo service redis stop
+   42  redis-server
+   43  redis-cli --version
+   44  redis-cli
+   45  redis-server --version
+   46  sudo yum-config-manager --enable epel
+   47  sudo yum remove redis
+   48  sudo yum install redis
+   49  sudo redis-server /etc/redis/redis.conf
+   50  cat /etc/redis.conf
+   51  sudo cat /etc/redis.conf
+   52  sudo vim /etc/redis.conf
+   53  sudo redis-server /etc/redis.conf
+   54  sudo vim /etc/redis.conf
+   55  redis-server 
+   56  sudo vim /etc/redis.conf
+   57  redis-server 
+   58  history
