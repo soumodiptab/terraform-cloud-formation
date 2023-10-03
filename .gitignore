@@ -5,3 +5,4 @@
 *.hcl
 **/keys/*
 **/*.plan
+4-node-upgrade/resources/dumpjun01.zip

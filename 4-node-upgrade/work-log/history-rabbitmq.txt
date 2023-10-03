@@ -1,30 +1,71 @@
-c2-user@ip-10-0-1-161 ~]$ history
-    1  sudo yum update
-    2  udo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-    3  sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-    4  sudo yum-config-manager --enable epel
-    5  sudo yum install erlang --enablerepo=epel
-    6  sudo yum install erlang --enablerepo=epel -y
-    7  sudo yum install -y socat
-    8  sudo yum install logrotate
-    9  clear
-   10  ls
-   11  clear
-   12  wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.10/rabbitmq-server-3.6.10-1.el6.noarch.rpm
-   13  yum install rabbitmq-server
-   14  sudo yum install rabbitmq-server
-   15  sudo yum install rabbitmq-server -y
-   16  sudo rabbitmq-plugins enable rabbitmq_management
-   17  udo rabbitmqctl add_user rabbitmq rabbitmq
-   18  sudo rabbitmqctl add_user rabbitmq rabbitmq
-   19  sudo service rabbitmq-server restart
-   20  sudo service rabbitmq-server status
-   21  clear
-   22  ls
-   23  clear
-   24  ls
-   25  rabbitmq-plugins enable rabbitmq_management
-   26  sudo rabbitmq-plugins enable rabbitmq_management
-   27  sudo service rabbitmq-server status
-   28  exit
-   29  history
+ 1  yum update -y
+    2  ls
+    3  yum install redis-server
+    4  sudo yum install redis-server -y
+    5  sudo amazon-linux-extras install epel
+    6  sudo amazon-linux-extras install epel -y
+    7  sudo yum update
+    8  yum install redis-server
+    9  sudo yum install redis-server
+   10  sudo yum install redis
+   11  redis-cli
+   12  sudo systemctl start redis
+   13  redis-cli
+   14  clear
+   15  sudo systemctl enable redis-server
+   16  sudo systemctl redis-server status
+   17  sudo service redis-server status
+   18  sudo service redis status
+   19  sudo systemctl enable redis
+   20  sudo systemctl enable redis-server
+   21  redis-server
+   22  sudo systemctl disable redis
+   23  sudo systemctl stop redis
+   24  redis-server
+   25  vim /etc/redis/redis.conf
+   26  cat /etc/redis/redis.conf
+   27  sudo vim /etc/redis/redis.conf
+   28  sudo touch /etc/redis/redis.conf
+   29  mkdir /etc/redis
+   30  sudo vim /etc/redis/redis.conf
+   31  redis-server
+   32  sudo service redis start
+   33  redis-cli
+   34  sudo service redis stop
+   35  sudo service redis-server start
+   36  sudo systemctl redis-server start
+   37  sudo systemctl start redis
+   38  sudo systemctl redis
+   39  sudo service redis start
+   40  sudo service redis stop
+   41  redis-server
+   42  redis-cli --version
+   43  redis-cli
+   44  redis-server --version
+   45  sudo yum-config-manager --enable epel
+   46  sudo yum remove redis
+   47  sudo yum install redis
+   48  sudo redis-server /etc/redis/redis.conf
+   49  cat /etc/redis.conf
+   50  sudo cat /etc/redis.conf
+   51  sudo vim /etc/redis.conf
+   52  sudo redis-server /etc/redis.conf
+   53  sudo vim /etc/redis.conf
+   54  redis-server 
+   55  sudo vim /etc/redis.conf
+   56  redis-server 
+   57  history
+   58  ls
+   59  clear
+   60  sudo service redis-server start
+   61  sudo service redis start
+   62  redis-cli
+   63  clear
+   64  sudo service redis stop
+   65  history
+   66  sudo redis-server /etc/redis.conf
+   67  redis-server
+   68  redis-server &
+   69  redis-cli
+   70  ls
+   71  history
